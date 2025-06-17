@@ -21,7 +21,7 @@ for (let i = 0; i < 5; i++) {
 }
 
 // No está en el scope de ´i´, por lo tanto da error de referencia, la variable está en TDZ
-console.log(i); // Imprime ´Uncaught ReferenceError: i is not defined´
+//console.log(i); // Imprime ´Uncaught ReferenceError: i is not defined´
 
 // Aqui no da error porque la variable se hoistea como undefined, por lo tanto está en el scope
 console.log(prueba); // Imprime ´undefined´
@@ -34,6 +34,6 @@ const PI = 3.1416;
 // Con los objetos es distinto, el identificador no puede mutar, su referencia sí
 const obj = { a: 1 };
 obj.a = 2; // válido
-obj = {}; // Error
+//obj = {}; // Error
 
 //esto pasa porque los arreglos y los objetos son valores compuestos donde se accede a la referencia del valor, no directamente al valor

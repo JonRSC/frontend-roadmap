@@ -27,7 +27,24 @@ Construir una base sólida en desarrollo web frontend, aplicando tecnologías cl
 
 ### ⚙️ Etapa 2: JavaScript Profundo
 
-> DOM, Eventos, lógica, funciones, estructuras de control, asincronía, fetch, manipulación avanzada del navegador
+> Dominar JS a nivel técnico y los flujos de trabajo profesionales.
+
+- Tipos de datos
+- Estructuras de control
+- POO
+- Objetos y funciones del lenguaje
+- Programación asíncrona
+- Set, Map, Proxies
+- Contexto y This
+- JSON
+- DOM y BOM
+- AJAX
+- Módulos y APIs REST
+- SPA
+- Patrones de diseño
+- Seguridad en JS
+- Testing
+- Buenas prácticas, performance y clean code
 
 ### ⚛️ Etapa 3: React y SPA
 

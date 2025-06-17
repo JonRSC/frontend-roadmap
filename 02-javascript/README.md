@@ -33,11 +33,11 @@ Este módulo es parte del roadmap personal de desarrollo Frontend. Aquí se expl
 ## 1. Fundamentos del lenguaje
 
 - Variables: `var`, `let`, `const`
+- Scope, hoisting
 - Plantillas de cadenas de texto: `template strings`
 - Tipos primitivos y referencias
 - undefined, null y NaN
-- Funciones puras, IIFE
-- Scope, hoisting, closures
+- Funciones
 
 ## 2. Control de flujo y estructuras
 

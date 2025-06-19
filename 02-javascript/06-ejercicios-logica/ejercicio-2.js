@@ -14,11 +14,7 @@ const stringRevert = (string) =>
 console.log(stringRevert("Hola mundo"));
 
 const wordRepeat = (string = "", search = "") => {
-  if (typeof string !== "string" || typeof search !== "string") {
-    return "Se deben introducir valores válidos";
-  }
-
-  return string.split(" ").filter((value) => value.includes(search)).length;
+  return string.match(new RegExp(search, "gi")).length || [].length;
 };
 
 console.log(wordRepeat("Hola mundo adios mundo", "mundo"));
@@ -34,7 +30,7 @@ const replaceText = (string = "", value = "") => {
   if (typeof string !== "string" && typeof value !== "string")
     return "Ingresa un string válido";
 
-  return string.split(value).join("");
+  return string.replace(new RegExp(value, "ig"), "");
 };
 
 console.log(replaceText("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"));

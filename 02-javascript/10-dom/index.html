@@ -4,6 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEB APIs</title>
+    <style>
+      :root {
+        --yellow-color: #f7df1e;
+        --dark-color: #222;
+      }
+
+      .card {
+        display: inline-block;
+        background-color: var(--dark-color);
+        color: var(--yellow-color);
+      }
+      .card figcaption {
+        padding: 1rem;
+      }
+      .rotate-45 {
+        transform: rotate(45deg);
+      }
+      .rotate-135 {
+        transform: rotate(135deg);
+      }
+      .opacity-80 {
+        opacity: 0.8;
+      }
+      .sepa {
+        filter: sepia(1);
+      }
+    </style>
   </head>
   <body>
     <h1>Web APIs</h1>
@@ -49,6 +76,7 @@
       href="./dom.html"
       data-description="Document Object Model"
       data-id="1"
+      style="background-color: #fff; color: aqua"
       >DOM</a
     >
     <section class="cards">

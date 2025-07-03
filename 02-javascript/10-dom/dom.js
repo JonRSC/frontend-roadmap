@@ -57,7 +57,6 @@ console.log(document.querySelector("#menu li"));
 
 // obtiene todos los elementos li del selector con el id #menu
 console.log(document.querySelectorAll("#menu li"));
-*/
 
 console.log("****************** ATRIBUTOS ***************************");
 // Atributo lang
@@ -103,3 +102,83 @@ console.log(linkDOM.dataset.description);
 console.log(linkDOM.hasAttribute("data-id"));
 linkDOM.removeAttribute("data-id");
 console.log(linkDOM.hasAttribute("data-id"));
+
+
+console.log(
+  "****************** ESTILOS Y VARIABLES CSS ***************************"
+);
+
+const linkDOM = document.querySelector(".link-dom");
+
+//Regresa un objeto con todas las propiedades CSS válidas
+// Las propiedades deben ser con Camel Case
+console.log(linkDOM.style); // CSSStyleDeclaration
+console.log(linkDOM.getAttribute("style")); //Muestra solo los estilos definidos
+console.log(linkDOM.style.backgroundColor);
+console.log(linkDOM.style.color);
+//Retonar las propiedades dinámicas de css
+console.log(window.getComputedStyle(linkDOM));
+//Obtener el valor de una propiedad en específico
+console.log(getComputedStyle(linkDOM).getPropertyValue("color"));
+
+//Formas de cambiar los estilos
+linkDOM.style.setProperty("text-decoration", "none");
+linkDOM.style.setProperty("display", "block");
+linkDOM.style.width = "50%";
+linkDOM.style.textAlign = "center";
+linkDOM.style.marginLeft = "auto";
+linkDOM.style.marginRight = "auto";
+linkDOM.style.padding = "1rem";
+linkDOM.style.borderRadius = ".5rem";
+
+//Variables CSS - Custom Properties CSS
+const html = document.documentElement,
+  body = document.body;
+
+//Se obtiene el valor de root, las variables globales que se definieron en el CSS
+let varDarkColor = getComputedStyle(html).getPropertyValue("--dark-color"),
+  varYellowColor = getComputedStyle(html).getPropertyValue("--yellow-color");
+
+console.log(varDarkColor, varYellowColor);
+
+body.style.backgroundColor = varDarkColor;
+body.style.color = varYellowColor;
+
+html.style.setProperty("--dark-color", "#000");
+varDarkColor = getComputedStyle(html).getPropertyValue("--dark-color");
+
+body.style.setProperty("background-color", varDarkColor);
+*/
+
+console.log("****************** CLASES ***************************");
+const card = document.querySelector(".card");
+
+console.log(card);
+//Devuelve un DOMTokenList con todas las clases del elemento
+console.log(card.classList);
+// indica si la clase existe
+console.log(card.classList.contains("rotate-45")); // false
+// agrega una clase
+card.classList.add("rotate-45");
+console.log(card.classList.contains("rotate-45")); // true
+console.log(card.className);
+console.log(card.classList);
+//Para eliminar una clase
+card.classList.remove("rotate-45");
+
+console.log(card.classList.contains("rotate-45"));
+// Funciona como interruptor, si tiene la clase, se la quita, si no, se la agrega
+// recibe dos parametros,token, y force,
+//force es opcional, si se agrega, solo será una operación way-only, recibe un boolean
+//si es true, el token solo será añadido, pero no se elimina
+//si es false, el token solo será eliminado, pero no será añadido
+card.classList.toggle("rotate-45"); // si no está, la agrega, si está, lo elimina
+console.log(card.classList.contains("rotate-45"));
+card.classList.toggle("rotate-45"); // si no está, la agrega, si está, lo elimina
+console.log(card.classList.contains("rotate-45"));
+//Cambia la clase por el segundo paámetro
+card.classList.replace("rotate-45", "rotate-135");
+//Agrega clases, se pueden añadir varias solo separadas por comas
+card.classList.add("opacity-80", "sepia");
+card.classList.remove("opacity-80", "sepia");
+card.classList.toggle("opacity-80", "sepia");
